@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "webcam-settings": {
+      "commandName": "Project",
+      "commandLineArgs": "store d:\\1.yaml"
+    }
+  }
+}
