@@ -2,21 +2,35 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net9.0-windows</TargetFramework>
 	<SelfContained>true</SelfContained>
     <PublishSingleFile>True</PublishSingleFile>
 	<PublishReadyToRun>False</PublishReadyToRun>
-	<PublishTrimmed>True</PublishTrimmed>
-	<RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+	<PublishTrimmed>False</PublishTrimmed>
     <RootNamespace>WebcamSettings</RootNamespace>
     <AssemblyName>WebcamSettings</AssemblyName>
     <Authors>dymanoid</Authors>
+    <Nullable>enable</Nullable>
+    <PublishAot>False</PublishAot>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
     <PackageReference Include="DirectShowLib.Standard" Version="2.1.0" />
+    <PackageReference Include="Roslynator.Analyzers" Version="4.13.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.13.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="SharpYaml" Version="1.6.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 
 </Project>
